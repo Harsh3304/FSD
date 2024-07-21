@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JustCats</title>
+	<style>
+		body {
+			background-image: url('https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?q=80&w=2660&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+			background-size: cover;
+			background-position: center;
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+		.container {
+			max-width: 800px;
+			margin: 40px auto;
+			text-align: center;
+			padding: 20px;
+			background-color: #ffffff;
+			border-radius: 5px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            opacity: 0.6;
+		}
+		.container h1 {
+			color: #ff69b4;
+		}
+		.container p {
+			margin-bottom: 20px;
+		}
+		.button {
+			background-color: #ff69b4;
+			color: #fff;
+			border: none;
+			padding: 10px 20px;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		.button:hover {
+			background-color: #ff89b4;
+		}
+		.slider {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.image-container {
+			display: inline-block;
+			margin: 20px;
+		}
+		.next-button {
+			background-color: #ff69b4;
+			color: #fff;
+			border: none;
+			padding: 10px 20px;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+        .button-container {
+	    text-align: center;
+	    margin-top: 20px;
+        }
+
+		.next-button:hover {
+			background-color: #ff89b4;
+		}
+        
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<h1>JustCats!</h1>
+		<p>Welcome to our feline fan club!</p>
+		<button class="button">Join Our Community</button>
+		<div class="slider">
+			<div class="image-container">
+				<img src="https://images.unsplash.com/photo-1535123268188-3276dc455e77?q=80&w=2285&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Cat 1" width="500" height="700" id="cat-image">
+                <div class="button-container">
+                    <button class="next-button" onclick="nextImage()">Next</button>
+                </div>
+    
+		<script>
+			const catImages = [
+				{   
+					url: 'https://images.unsplash.com/photo-1535123268188-3276dc455e77?q=80&w=2285&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+					alt: 'Cat 1'
+				},
+				{
+					url: 'https://images.unsplash.com/photo-1612531822780-ce3193485c08?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MjJ8fHxlbnwwfHx8fHw%3D',
+					alt: 'Cat 2'
+				},
+				{
+					url: 'https://images.unsplash.com/photo-1533747986196-5634e2c5f235?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max',
+					alt: 'Cat 3'
+				}
+			];
+			let currentImageIndex = 0;
+			
+			function nextImage() {
+				currentImageIndex++;
+				if (currentImageIndex >= catImages.length) {
+					currentImageIndex = 0;
+				}
+				const catImage = document.getElementById('cat-image');
+				catImage.src = catImages[currentImageIndex].url;
+				catImage.alt = catImages[currentImageIndex].alt;
+			}
+            const button = document.querySelector('.button');
+                button.addEventListener('click', () => {
+                    alert('Thank you for joining our cat community!');
+                });
+		</script>
+	</div>
+</div>
+</body>

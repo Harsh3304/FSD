@@ -1,0 +1,67 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>OnlyCats</title>
+        <style>
+            body {
+                background-image: url('http://images.unsplash.com/photo-1597223552359-9245e0b07b4e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max');
+                background-size: cover;
+                background-position: center;
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+            .container {
+                max-width: 800px;
+                margin: 40px auto;
+                text-align: center;
+                padding: 20px;
+                background-color: #fff;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+            .container h1 {
+                color: #ff69b4;
+            }
+            .container p {
+                margin-bottom: 20px;
+            }
+            .button {
+                background-color: #ff69b4;
+                color: #fff;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            .button:hover {
+                background-color: #ff89b4;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>OnlyCats!</h1>
+            <p>Welcome to our feline fan club!</p>
+            <button class="button">Join Our Community</button>
+            <div class="slider">
+                <p></p>
+                <a href="https://unsplash.com/photos/brown-and-gray-cat-on-pink-textile-zBbY7VaUiqU">
+                    <img src="https://images.unsplash.com/photo-1535123268188-3276dc455e77?q=80&w=2285&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Cat 1" width="500" height="700">
+                </a>
+                <a href="https://unsplash.com/photos/<photo-id-2>">
+                    <img src="https://images.unsplash.com/photo-1612531822780-ce3193485c08?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MjJ8fHxlbnwwfHx8fHw%3D" alt="Cat 2" width="500" height="500">
+                </a>
+                <a href="https://unsplash.com/photos/<photo-id-3>">
+                    <img src="https://images.unsplash.com/photo-1533747986196-5634e2c5f235?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max" alt="Cat 3">
+                </a>
+            </div>
+            <script>
+                const button = document.querySelector('.button');
+                button.addEventListener('click', () => {
+                    alert('Thank you for joining our cat community!');
+                });
+            </script>
+        </body>
+    </html>
